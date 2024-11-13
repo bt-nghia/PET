@@ -3,7 +3,7 @@ iFashion:
   data_path: './datasets'
   batch_size_train: 2048
   batch_size_test: 2048
-  topk: [20, 40] # Recall@k, NDCG@k
+  topk: [1, 2, 20, 40] # Recall@k, NDCG@k
   neg_num: 1 # # of Negative sample
   lrs: [1.0e-3] # learning rate
 
