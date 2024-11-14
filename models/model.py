@@ -562,6 +562,14 @@ class PET(nn.Module):
         users_feature_IL, users_feature_BL = users_feature
         items_feature_IL, items_feature_BI = items_feature
         bundles_feature_BL, bundles_feature_BI = bundles_feature
+
+        torch.save(users_feature_IL, "u1.pt")
+        torch.save(users_feature_BL, "u2.pt")
+        torch.save(items_feature_IL, "i1.pt")
+        torch.save(items_feature_BI, "i2.pt")
+        torch.save(bundles_feature_BL, "b1.pt")
+        torch.save(bundles_feature_BI, "b2.pt")
+        
         
         users_feature_BI = self.get_BI_user_rep(items_feature_BI, test = True).squeeze(0)
         bundles_feature_IL = self.get_IL_bundle_rep(items_feature_IL, test = True).squeeze(0)
