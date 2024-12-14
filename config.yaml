@@ -3,12 +3,12 @@ iFashion:
   data_path: './datasets'
   batch_size_train: 2048
   batch_size_test: 2048
-  topk: [1, 2, 20, 40] # Recall@k, NDCG@k
+  topk: [1, 2, 5, 10, 20, 40] # Recall@k, NDCG@k
   neg_num: 1 # # of Negative sample
   lrs: [1.0e-3] # learning rate
 
   # best settings
-  embedding_sizes: [256] # the embedding size for user, bundle, and item
+  embedding_sizes: [64] # the embedding size for user, bundle, and item
   num_layerss: [1] # how many layers to propagate each main view, we set 1 layer in all dataset
   
   # Dropout ratio for each view
